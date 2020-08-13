@@ -1,0 +1,8 @@
+<h1><%= @cocktail.name.capitalize %></h1>
+  <p>It's a easy cocktail to make at home</p>
+  <%= link_to "Edit your cocktail", edit_cocktail_path %>
+  <%= link_to "Delete #{@cocktail.name}",
+               cocktail_path(@cocktail),
+               method: :delete,
+               data: { confirm: "Are you sure?" } %>
+  <%= link_to "Home", cocktails_path%>

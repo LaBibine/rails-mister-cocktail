@@ -1,0 +1,10 @@
+<h1>Pink Lady Cocktails</h1>
+<h2> Our Pink Cocktails Perfect For The Summer !</h2>
+<ul>
+      <% @cocktails.each do |cocktail| %>
+      <li>
+       <h2><%=link_to cocktail.name, cocktail_path(cocktail)%></h2> 
+      </li>
+      <% end %>
+</ul>
+<%=link_to "Add your pink cocktail", new_cocktail_path %>
