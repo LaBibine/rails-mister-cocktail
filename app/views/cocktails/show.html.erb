@@ -1,8 +1,18 @@
-<h1><%= @cocktail.name.capitalize %></h1>
-  <p>It's a easy cocktail to make at home</p>
-  <%= link_to "Edit your cocktail", edit_cocktail_path %>
+ <div class="banner-75vh d-flex justify-content-center align-items-center"
+     style="background-image: url();">
+  </div>
+  <h1>A easy cocktail to make at home</h1>
+  <div class="card" style="width: 18rem;">
+  <img src="https://images.unsplash.com/photo-1527661591475-527312dd65f5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=358&q=80" class="card-img-top" alt="watermelon cocktail">
+  <div class="card-body">
+  <h2 class="card-title"><%= @cocktail.name.capitalize %></h2>
+    <p class="card-text">Watermelon, Yuzu, mint leaves and Corean shochu.</p>
+  </div>
+  <div class="card-body">
   <%= link_to "Delete #{@cocktail.name}",
                cocktail_path(@cocktail),
                method: :delete,
                data: { confirm: "Are you sure?" } %>
   <%= link_to "Home", cocktails_path%>
+  </div>
+</div>

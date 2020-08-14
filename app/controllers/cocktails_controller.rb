@@ -22,10 +22,10 @@ class CocktailsController < ApplicationController
       end
   end
 
-  def edit
-    @cocktail = Cocktail.find(params[:id])
-    @cocktail.save
-  end
+  #def edit
+  #@cocktail = Cocktail.find(params[:id])
+  #@cocktail.save
+  #end
 
   def update
     @cocktail = Cocktail.find(params[:id])
